@@ -3,11 +3,28 @@ package person;
 import person.consciousness.Knowledge;
 
 public class Student {
+    private String name;
+    private Knowledge knowledge;
+
     public Student(String name) {
-        //TODO: Implementation is needed
+        this.name = name;
     }
 
-    public void setKnowledge(Knowledge knowledge) {
-        //TODO: Implementation is needed
+    public Student withKnowledge(Knowledge knowledge) {
+        this.knowledge = knowledge;
+        return this;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Knowledge getKnowledge() {
+        return knowledge;
+    }
+
 }

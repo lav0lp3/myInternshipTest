@@ -17,8 +17,8 @@ public class University {
         internship = new Internship("Interlink");
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public String getStudents() {
+        return toString();
     }
 
     public void addStudent(Student student) {
@@ -47,5 +47,20 @@ public class University {
                 smartStudents.add(student);
         }
         internship.setStudents(smartStudents);
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("University name : ");
+        sb.append(name);
+        sb.append("\nList of university students:\n");
+        for (Student student : students) {
+            sb.append(student.getName());
+            sb.append(" - ");
+            sb.append(student.getKnowledge().getLevel());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }

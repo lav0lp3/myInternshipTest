@@ -26,8 +26,23 @@ public class Internship {
         this.students = students;
     }
 
-    public List<Student> getStudents() {
-        return students;
+    public String getStudents() {
+        return toString();
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Internship name : ");
+        sb.append(name);
+        sb.append("\nList of internship's students:\n");
+        for (Student student : students) {
+            sb.append(student.getName());
+            sb.append(" - ");
+            sb.append(student.getKnowledge().getLevel());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
 

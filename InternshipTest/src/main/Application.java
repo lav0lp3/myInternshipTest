@@ -1,5 +1,6 @@
 package main;
 
+import IO.DataTransfer;
 import institution.University;
 import institution.interlink.Internship;
 import person.Student;
@@ -17,5 +18,8 @@ public class Application {
         university.setSmartStudents();
         System.out.println(university.getStudents());
         System.out.println(internship.getStudents());
+        DataTransfer dTransfer = new DataTransfer();
+        System.out.println(dTransfer.read());
+
     }
 }
